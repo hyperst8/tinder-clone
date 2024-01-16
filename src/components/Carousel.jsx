@@ -17,8 +17,8 @@ export default function Carousel({ children: data }) {
   const goToLast = () => setCurrent(data.length - 1);
 
   return (
-    <div>
-      <div className="flex justify-between items-center py-2 px-4 mb-4">
+    <div className="carousel-container">
+      <div className="flex justify-between items-center py-2 px-4 mb-4 mx-auto">
         <button
           onClick={goToFirst}
           className="btn-slider"
@@ -33,7 +33,7 @@ export default function Carousel({ children: data }) {
         </button>
       </div>
 
-      <div className="overflow-hidden relative md:w-[25rem] h-[37.5rem] mx-auto rounded-xl shadow-xl">
+      <div className="carousel overflow-hidden relative w-[25rem] h-[37.5rem] md:mx-auto rounded-xl shadow-xl">
         <div
           className="element flex transition-transform ease-out duration-500 object-cover h-full w-full"
           style={{ transform: `translateX(-${current * 100}%)` }}
