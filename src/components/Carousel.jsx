@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 export default function Carousel({ children: data }) {
@@ -8,6 +9,8 @@ export default function Carousel({ children: data }) {
 
   const next = () =>
     setCurrent((current) => (current === data.length - 1 ? 0 : current + 1));
+
+  const goTo = (index) => setCurrent(index);
 
   return (
     <div className="overflow-hidden relative w-[96%] md:w-[25rem] h-[37.5rem] mx-auto">
@@ -38,7 +41,8 @@ export default function Carousel({ children: data }) {
           {data.map((_, index) => (
             <div
               key={index}
-              className={`transition-all w-3 h-3 bg-white shadow-lg rounded-full ${
+              onClick={() => goTo(index)}
+              className={`transition-all w-3 h-3 bg-white shadow-lg rounded-full cursor-pointer ${
                 current === index ? "p-2" : "bg-opacity-50"
               }`}
             />
