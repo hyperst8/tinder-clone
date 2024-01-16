@@ -7,4 +7,8 @@
   .btn-next {
     @apply w-10 h-10 flex justify-center items-center cursor-pointer rounded-full shadow-lg bg-white text-gray-800 hover:opacity-75;
   }
+
+  .btn-slider {
+    @apply rounded-md uppercase font-semibold text-white bg-indigo-500 py-2 px-4 cursor-pointer hover:opacity-80;
+  }
 }

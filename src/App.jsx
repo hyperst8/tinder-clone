@@ -1,9 +1,10 @@
 // Import components
 // import SliderImages from "./components/SliderImages";
 import Carousel from "./components/Carousel";
+import Slider from "./components/Slider";
 
 // Import content
-import images from "./content/data";
+import handiCrafts from "./content/data.js";
 
 function App() {
   return (
@@ -11,18 +12,13 @@ function App() {
       {/* <SliderImages images={images} /> */}
       <div className="max-w-lg h-dvh flex flex-col items-center justify-evenly mx-auto">
         <div>
-          <h1>Slideshow</h1>
-          <div>
-            <p>Button container here</p>
-          </div>
+          <h1 className="font-bold text-2xl">Tinder Clone</h1>
         </div>
         <Carousel>
-          {images.map((image, index) => (
-            <img
+          {handiCrafts.map((slider, index) => (
+            <Slider
               key={index}
-              className="object-cover h-full w-full"
-              src={image}
-              alt={`Slide ${index + 1}`}
+              data={slider}
             />
           ))}
         </Carousel>
