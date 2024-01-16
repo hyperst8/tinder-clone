@@ -33,7 +33,7 @@ export default function Carousel({ children: data }) {
         </button>
       </div>
 
-      <div className="overflow-hidden relative w-[96%] md:w-[25rem] h-[37.5rem] mx-auto rounded-xl shadow-xl">
+      <div className="overflow-hidden relative md:w-[25rem] h-[37.5rem] mx-auto rounded-xl shadow-xl">
         <div
           className="element flex transition-transform ease-out duration-500 object-cover h-full w-full"
           style={{ transform: `translateX(-${current * 100}%)` }}

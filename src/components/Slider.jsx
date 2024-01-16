@@ -6,7 +6,7 @@ export default function Slider({ data }) {
   const { name, description, image, phone, liked } = data;
 
   return (
-    <div className="min-w-[25rem]">
+    <div className="slider min-w-[25rem]">
       <div className="h-[25rem]">
         <img
           className="w-full h-full object-cover"
