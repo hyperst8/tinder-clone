@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 
-export default function Slider({ images }) {
+export default function SliderImages({ images }) {
   const [slideIndex, setSlideIndex] = useState(0);
   const [activeSlide, setActiveSlide] = useState(images[slideIndex]);
 
