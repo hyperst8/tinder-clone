@@ -13,7 +13,7 @@ export default function Carousel({ children: data }) {
   const goTo = (index) => setCurrent(index);
 
   return (
-    <div className="overflow-hidden relative w-[96%] md:w-[25rem] h-[37.5rem] mx-auto">
+    <div className="overflow-hidden relative w-[96%] md:w-[25rem] h-[37.5rem] mx-auto rounded-xl shadow-xl">
       <div
         className="element flex transition-transform ease-out duration-500 w-full h-full"
         style={{ transform: `translateX(-${current * 100}%)` }}

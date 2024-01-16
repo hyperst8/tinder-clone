@@ -20,7 +20,7 @@ function App() {
           {images.map((image, index) => (
             <img
               key={index}
-              className="object-cover h-full w-full rounded-xl shadow-xl"
+              className="object-cover h-full w-full"
               src={image}
               alt={`Slide ${index + 1}`}
             />
