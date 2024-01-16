@@ -11,4 +11,8 @@
   .btn-slider {
     @apply rounded-md uppercase font-semibold text-white bg-indigo-500 py-2 px-4 cursor-pointer hover:opacity-80;
   }
+
+  #like svg {
+    @apply w-7 h-7;
+  }
 }

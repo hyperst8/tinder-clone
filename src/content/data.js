@@ -11,18 +11,21 @@ const handicrafts = [
     description: "A handyman who can build anything with simple tools",
     image: image01,
     phone: "09123456789",
+    liked: false,
   },
   {
     name: "Alice the Artisan",
     description: "An artist specializing in intricate handcrafted sculptures",
     image: image02,
     phone: "09876543210",
+    liked: false,
   },
   {
     name: "Crafty Cathy",
     description: "Creates beautiful handmade jewelry using unique materials",
     image: image03,
     phone: "08765432109",
+    liked: false,
   },
   {
     name: "Sam the Stitcher",
@@ -30,6 +33,7 @@ const handicrafts = [
       "A skilled tailor who crafts custom clothing with attention to detail",
     image: image04,
     phone: "09543210987",
+    liked: false,
   },
   {
     name: "Woodworking Walter",
@@ -37,12 +41,14 @@ const handicrafts = [
       "Crafts elegant wooden furniture pieces with precision and style",
     image: image05,
     phone: "09432109876",
+    liked: false,
   },
   {
     name: "Eva the Engraver",
     description: "Specializes in personalized engraving on various materials",
     image: image06,
     phone: "09654321098",
+    liked: false,
   },
 ];
 
