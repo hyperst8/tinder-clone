@@ -13,7 +13,6 @@ const DRAG_ANIMATION = {
 
 export default function Carousel({ children: data }) {
   const [current, setCurrent] = useState(0);
-  const [dragging, setDragging] = useState(false);
 
   const dragX = useMotionValue(0);
 
@@ -29,13 +28,7 @@ export default function Carousel({ children: data }) {
 
   const goToLast = () => setCurrent(data.length - 1);
 
-  const onDragStart = () => {
-    setDragging(true);
-  };
-
   const onDragEnd = () => {
-    setDragging(false);
-
     const x = dragX.get();
 
     if (x <= -DRAG_BUFFER && current < data.length - 1) {
@@ -70,7 +63,6 @@ export default function Carousel({ children: data }) {
           style={{ x: dragX }}
           animate={{ translateX: `-${current * 100}%` }}
           transition={DRAG_ANIMATION}
-          onDragStart={onDragStart}
           onDragEnd={onDragEnd}
         >
           {data}
