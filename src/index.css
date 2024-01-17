@@ -5,7 +5,7 @@
 @layer base {
   .btn-prev,
   .btn-next {
-    @apply w-10 h-10 flex justify-center items-center cursor-pointer rounded-full drop-shadow-lg shadow-lg bg-white text-gray-800 hover:opacity-75;
+    @apply w-10 h-10 flex justify-center items-center cursor-pointer rounded-full drop-shadow-lg shadow-lg bg-white text-gray-800 hover:opacity-75 pointer-events-auto;
   }
 
   .btn-prev {

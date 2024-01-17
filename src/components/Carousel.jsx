@@ -76,7 +76,7 @@ export default function Carousel({ children: data }) {
           {data}
         </motion.div>
 
-        <div className="buttons-container absolute top-1/2 -translate-y-[55%] inset-0 flex items-center justify-between p-4 h-[10%]">
+        <div className="buttons-container absolute top-1/2 -translate-y-[55%] inset-0 flex items-center justify-between p-4 h-[10%] pointer-events-none">
           <button
             onClick={previous}
             className="btn-prev"
