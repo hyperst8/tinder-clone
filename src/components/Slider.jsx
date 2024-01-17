@@ -18,7 +18,7 @@ export default function Slider({ data }) {
         <h2 className="font-semibold text-xl">{name}</h2>
         <p className="my-2 px-4">{description}</p>
         <button
-          onClick={() => alert("Hello")}
+          onClick={() => alert(`Calling ${name} ...`)}
           id="call"
           className="bg-green-400 font-semibold p-2 rounded-lg w-36 flex justify-between items-center cursor-pointer hover:opacity-80"
         >
