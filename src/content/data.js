@@ -1,9 +1,9 @@
-import image01 from "../assets/01.jpg";
-import image02 from "../assets/02.jpg";
-import image03 from "../assets/03.jpg";
-import image04 from "../assets/04.jpg";
-import image05 from "../assets/05.jpg";
-import image06 from "../assets/06.jpg";
+import image01 from "../assets/d01.jpg";
+import image02 from "../assets/d02.jpg";
+import image03 from "../assets/d03.jpg";
+import image04 from "../assets/d04.jpg";
+import image05 from "../assets/d05.jpg";
+import image06 from "../assets/d06.jpg";
 
 const handicrafts = [
   {
