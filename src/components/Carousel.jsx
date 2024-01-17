@@ -62,7 +62,7 @@ export default function Carousel({ children: data }) {
         </button>
       </div>
 
-      <div className="carousel overflow-hidden relative w-[25rem] h-[37.5rem] md:mx-auto rounded-xl shadow-xl">
+      <div className="carousel bg-gray-200 overflow-hidden relative w-[25rem] h-[37.5rem] md:mx-auto rounded-xl shadow-xl">
         <motion.div
           className="element flex cursor-grab active:cursor-grabbing transition-transform ease-out duration-500 object-cover h-full w-full"
           drag="x"

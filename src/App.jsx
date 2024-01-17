@@ -12,7 +12,7 @@ function App() {
       {/* <SliderImages images={images} /> */}
       <div className="max-w-lg h-dvh flex flex-col items-center justify-evenly mx-auto">
         <div>
-          <h1 className="font-bold text-2xl">Tinder Clone</h1>
+          <h1 className="font-bold text-2xl drop-shadow-lg">Tinder Clone</h1>
         </div>
         <Carousel>
           {handiCrafts.map((slider, index) => (
