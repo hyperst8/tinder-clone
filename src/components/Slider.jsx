@@ -1,9 +1,16 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import { FaPhone } from "react-icons/fa";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 
 export default function Slider({ data }) {
   const { name, description, image, phone, liked } = data;
+
+  const [isLiked, setIsLiked] = useState(liked);
+
+  const handleLikeClick = () => {
+    setIsLiked(!isLiked);
+  };
 
   return (
     <div className="slide min-w-[25rem]">
@@ -27,8 +34,9 @@ export default function Slider({ data }) {
         <button
           id="like"
           className="absolute right-4"
+          onClick={handleLikeClick}
         >
-          {liked ? <FaHeart className="fill-yellow-400" /> : <FaRegHeart />}
+          {isLiked ? <FaHeart className="fill-yellow-400" /> : <FaRegHeart />}
         </button>
       </div>
     </div>
