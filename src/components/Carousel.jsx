@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion, useMotionValue } from "framer-motion";
 import { useState } from "react";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 const DRAG_BUFFER = 50;
 const DRAG_ANIMATION = {
@@ -80,13 +81,13 @@ export default function Carousel({ children: data }) {
             onClick={previous}
             className="btn-prev"
           >
-            &lt;
+            <MdArrowBackIos />
           </button>
           <button
             onClick={next}
             className="btn-next"
           >
-            &gt;
+            <MdArrowForwardIos />
           </button>
         </div>
 
