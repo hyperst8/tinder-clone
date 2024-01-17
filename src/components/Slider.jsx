@@ -16,7 +16,7 @@ export default function Slider({ data }) {
     <div className="slide min-w-[25rem]">
       <div className="h-[25rem]">
         <img
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover pointer-events-none"
           src={image}
           alt={name}
         />

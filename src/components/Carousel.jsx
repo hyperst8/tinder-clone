@@ -3,6 +3,12 @@ import { motion, useMotionValue } from "framer-motion";
 import { useState } from "react";
 
 const DRAG_BUFFER = 50;
+const DRAG_ANIMATION = {
+  type: "spring",
+  mass: 3,
+  stiffness: 400,
+  damping: 50,
+};
 
 export default function Carousel({ children: data }) {
   const [current, setCurrent] = useState(0);
@@ -62,13 +68,14 @@ export default function Carousel({ children: data }) {
           dragConstraints={{ left: 0, right: 0 }}
           style={{ x: dragX }}
           animate={{ translateX: `-${current * 100}%` }}
+          transition={DRAG_ANIMATION}
           onDragStart={onDragStart}
           onDragEnd={onDragEnd}
         >
           {data}
         </motion.div>
 
-        <div className="buttons-container absolute top-1/2 -translate-y-[55%] inset-0 flex items-center justify-between p-4 h-[40%]">
+        <div className="buttons-container absolute top-1/2 -translate-y-[55%] inset-0 flex items-center justify-between p-4 h-[10%]">
           <button
             onClick={previous}
             className="btn-prev"
