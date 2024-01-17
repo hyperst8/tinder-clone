@@ -22,7 +22,9 @@ export default function Slider({ data }) {
         />
       </div>
       <div className="bg-indigo-500 text-white h-full flex flex-col items-center pt-3 px-4 text-center relative">
-        <h2 className="font-semibold text-xl">{name}</h2>
+        <h2 className="font-bold text-xl text-yellow-400 drop-shadow-md">
+          {name}
+        </h2>
         <p className="my-2 px-4">{description}</p>
         <button
           onClick={() => alert(`Calling ${name} ...`)}
@@ -36,7 +38,11 @@ export default function Slider({ data }) {
           className="absolute right-4"
           onClick={handleLikeClick}
         >
-          {isLiked ? <FaHeart className="fill-yellow-400" /> : <FaRegHeart />}
+          {isLiked ? (
+            <FaHeart className="fill-yellow-400 drop-shadow-md" />
+          ) : (
+            <FaRegHeart />
+          )}
         </button>
       </div>
     </div>
