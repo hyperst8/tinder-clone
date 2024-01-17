@@ -1,6 +1,8 @@
 // Import components
 // import SliderImages from "./components/SliderImages";
+import { useState } from "react";
 import Carousel from "./components/Carousel";
+import Modal from "./components/Modal.jsx";
 import Slider from "./components/Slider";
 
 // Import content
@@ -8,6 +10,7 @@ import handiCrafts from "./content/data.js";
 // import foodImages from "./content/foody.js";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="app">
       {/* <SliderImages images={foodImages} /> */}
@@ -24,6 +27,12 @@ function App() {
           ))}
         </Carousel>
       </div>
+      {showModal && (
+        <Modal
+          name={"Mr Test"}
+          phone={"12345678"}
+        />
+      )}
     </div>
   );
 }
