@@ -3,13 +3,17 @@ import { useState } from "react";
 import { FaPhone } from "react-icons/fa";
 import { FaHeart, FaRegHeart } from "react-icons/fa6";
 
-export default function Slider({ data }) {
+export default function Slider({ data, onContact }) {
   const { name, description, image, phone, liked } = data;
 
   const [isLiked, setIsLiked] = useState(liked);
 
   const handleLikeClick = () => {
     setIsLiked(!isLiked);
+  };
+
+  const handleContact = () => {
+    onContact({ name, phone, openModal: true });
   };
 
   return (
@@ -27,7 +31,7 @@ export default function Slider({ data }) {
         </h2>
         <p className="my-2 px-4">{description}</p>
         <button
-          onClick={() => alert(`Calling ${name} ...`)}
+          onClick={handleContact}
           id="call"
           className="bg-green-400 font-semibold p-2 rounded-lg w-36 flex justify-between items-center cursor-pointer hover:opacity-80"
         >
