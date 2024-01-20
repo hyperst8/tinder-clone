@@ -3,7 +3,7 @@ import { motion, useMotionValue } from "framer-motion";
 import { useState } from "react";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
-const DRAG_BUFFER = 50;
+const DRAG_BUFFER = 30;
 const DRAG_ANIMATION = {
   type: "spring",
   mass: 3,
