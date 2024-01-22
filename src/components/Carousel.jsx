@@ -40,22 +40,16 @@ export default function Carousel({ children: data }) {
 
   return (
     <div className="carousel-container">
-      <div className="flex justify-between items-center py-2 px-4 mb-4 mx-auto">
-        <button
-          onClick={goToFirst}
-          className="btn-slider"
-        >
+      <div className="flex justify-between items-center py-2 px-6 mb-4 mx-auto">
+        <button onClick={goToFirst} className="btn-slider">
           First
         </button>
-        <button
-          onClick={goToLast}
-          className="btn-slider"
-        >
+        <button onClick={goToLast} className="btn-slider">
           Last
         </button>
       </div>
 
-      <div className="carousel bg-gray-200 overflow-hidden relative w-[25rem] h-[37.5rem] md:mx-auto rounded-xl shadow-xl">
+      <div className="carousel bg-gray-200 overflow-hidden relative w-[21rem] h-[30.5rem] md:w-[25rem] md:h-[37.5rem] md:mx-auto rounded-xl shadow-xl">
         <motion.div
           className="element flex cursor-grab active:cursor-grabbing transition-transform ease-out duration-500 object-cover h-full w-full"
           drag="x"
@@ -69,21 +63,15 @@ export default function Carousel({ children: data }) {
         </motion.div>
 
         <div className="buttons-container absolute top-1/2 -translate-y-[55%] inset-0 flex items-center justify-between p-4 h-[10%] pointer-events-none">
-          <button
-            onClick={previous}
-            className="btn-prev"
-          >
+          <button onClick={previous} className="btn-prev">
             <MdArrowBackIos />
           </button>
-          <button
-            onClick={next}
-            className="btn-next"
-          >
+          <button onClick={next} className="btn-next">
             <MdArrowForwardIos />
           </button>
         </div>
 
-        <div className="indicators absolute bottom-4 left-0 right-0">
+        <div className="indicators md:absolute bottom-4 left-0 right-0">
           <div className="flex items-center justify-center gap-2">
             {data.map((_, index) => (
               <div

@@ -29,26 +29,18 @@ function App() {
   return (
     <div className="app">
       {/* <SliderImages images={foodImages} /> */}
-      <div className="max-w-lg h-dvh flex flex-col items-center justify-evenly mx-auto">
-        <div>
+      <div className="max-w-lg h-dvh flex flex-col items-center justify-center mx-auto">
+        <div className="mb-4">
           <h1 className="font-bold text-2xl drop-shadow-lg">Tinder Clone</h1>
         </div>
         <Carousel>
           {handiCrafts.map((slider, index) => (
-            <Slider
-              key={index}
-              data={slider}
-              onContact={fetchSliderData}
-            />
+            <Slider key={index} data={slider} onContact={fetchSliderData} />
           ))}
         </Carousel>
       </div>
       {showModal && (
-        <Modal
-          name={name}
-          phone={phone}
-          closeModal={closingModal}
-        />
+        <Modal name={name} phone={phone} closeModal={closingModal} />
       )}
     </div>
   );

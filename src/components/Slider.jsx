@@ -17,8 +17,8 @@ export default function Slider({ data, onContact }) {
   };
 
   return (
-    <div className="slide min-w-[25rem]">
-      <div className="h-[25rem]">
+    <div className="slide min-w-[21rem] md:min-w-[25rem]">
+      <div className="h-[20rem] md:h-[25rem]">
         <img
           className="w-full h-full object-cover pointer-events-none"
           src={image}
